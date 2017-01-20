@@ -1,3 +1,4 @@
+
 FROM node:6.6
 MAINTAINER Benjamin Talmard
 
@@ -12,3 +13,5 @@ RUN apt-get update \
 
 RUN Xvfb -ac -screen scrn 1280x2000x24 :9.0 &
 RUN export DISPLAY=:9.0
+
+CMD ["pm2","start /home/site/wwwroot/bin/www --no-daemon"]
