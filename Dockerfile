@@ -14,4 +14,4 @@ RUN  npm install -g pm2 \
 RUN apt-get update \
   && apt-get install -y libgtk2.0-0 libgconf-2-4 libasound2 libxtst6 libxss1 libnss3 xvfb
 
-CMD ["/bin/init_container.sh"]
+CMD pm2 start /home/site/wwwroot/bin/www --no-daemon
