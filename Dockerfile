@@ -3,6 +3,7 @@ FROM node:6.6
 MAINTAINER Benjamin Talmard
 
 COPY init_container.sh /bin/
+RUN chmod 777 /bin/init_container.sh
 
 RUN  npm install -g pm2 \
   && mkdir /pm2home \
